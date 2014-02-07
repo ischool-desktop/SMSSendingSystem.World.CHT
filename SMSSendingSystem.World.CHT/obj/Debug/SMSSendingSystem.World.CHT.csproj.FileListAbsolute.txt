@@ -1,0 +1,8 @@
+D:\GitHub2\SMSSendingSystem.World.CHT\SMSSendingSystem.World.CHT\SMSSendingSystem.World.CHT\bin\Debug\SMSSendingSystem.World.CHT.dll
+D:\GitHub2\SMSSendingSystem.World.CHT\SMSSendingSystem.World.CHT\SMSSendingSystem.World.CHT\bin\Debug\SMSSendingSystem.World.CHT.pdb
+D:\GitHub2\SMSSendingSystem.World.CHT\SMSSendingSystem.World.CHT\SMSSendingSystem.World.CHT\obj\Debug\SMSSendingSystem.World.CHT.csprojResolveAssemblyReference.cache
+D:\GitHub2\SMSSendingSystem.World.CHT\SMSSendingSystem.World.CHT\SMSSendingSystem.World.CHT\obj\Debug\SMSSendingSystem.World.CHT.Properties.Resources.resources
+D:\GitHub2\SMSSendingSystem.World.CHT\SMSSendingSystem.World.CHT\SMSSendingSystem.World.CHT\obj\Debug\SMSSendingSystem.World.CHT.SendNow.resources
+D:\GitHub2\SMSSendingSystem.World.CHT\SMSSendingSystem.World.CHT\SMSSendingSystem.World.CHT\obj\Debug\SMSSendingSystem.World.CHT.csproj.GenerateResource.Cache
+D:\GitHub2\SMSSendingSystem.World.CHT\SMSSendingSystem.World.CHT\SMSSendingSystem.World.CHT\obj\Debug\SMSSendingSystem.World.CHT.dll
+D:\GitHub2\SMSSendingSystem.World.CHT\SMSSendingSystem.World.CHT\SMSSendingSystem.World.CHT\obj\Debug\SMSSendingSystem.World.CHT.pdb
