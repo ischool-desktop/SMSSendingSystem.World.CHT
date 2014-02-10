@@ -7,7 +7,7 @@ namespace SMSSendingSystem.World.CHT
 {
     class Permissions
     {
-        public static string 學生簡訊發送 { get { return "SMSSendingSystem.Student.SendNow.cs"; } }
+        public static string 學生簡訊發送 { get { return "SMSSendingSystem.Student.SendNow.cs.CHT"; } }
 
         public static bool 學生簡訊發送權限
         {

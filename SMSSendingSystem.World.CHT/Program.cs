@@ -15,8 +15,8 @@ namespace SMSSendingSystem.World.CHT
         {
             RibbonBarItem bh = K12.Presentation.NLDPanels.Student.RibbonBarItems["其它"];
             bh["簡訊"].Image = Properties.Resources.salesman_64;
-            bh["簡訊"]["學生簡訊發送"].Enable = false;
-            bh["簡訊"]["學生簡訊發送"].Click += delegate
+            bh["簡訊"]["學生簡訊發送(中華電信)"].Enable = false;
+            bh["簡訊"]["學生簡訊發送(中華電信)"].Click += delegate
             {
                 SendNow SN = new SendNow(tool.tag.student, K12.Presentation.NLDPanels.Student.SelectedSource);
                 SN.ShowDialog();
@@ -24,11 +24,11 @@ namespace SMSSendingSystem.World.CHT
 
             K12.Presentation.NLDPanels.Student.SelectedSourceChanged += delegate
             {
-                bh["簡訊"]["學生簡訊發送"].Enable = K12.Presentation.NLDPanels.Student.SelectedSource.Count > 0 && Permissions.學生簡訊發送權限;
+                bh["簡訊"]["學生簡訊發送(中華電信)"].Enable = K12.Presentation.NLDPanels.Student.SelectedSource.Count > 0 && Permissions.學生簡訊發送權限;
             };
 
             Catalog detail = RoleAclSource.Instance["學生"]["功能按鈕"];
-            detail.Add(new ReportFeature(Permissions.學生簡訊發送, "學生簡訊發送"));
+            detail.Add(new ReportFeature(Permissions.學生簡訊發送, "學生簡訊發送(中華電信)"));
         }
     }
 }
