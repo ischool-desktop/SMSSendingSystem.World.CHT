@@ -227,5 +227,18 @@ namespace SMSSendingSystem.World.CHT
             MsgCodeDic.Add("55", "http (port 8008) 連線不允許使用 GET 方法，請改用 POST 或改為 https(port 4443) 連線。");
             #endregion
         }
+
+        /// <summary>
+        /// 取得發送帳號密碼
+        /// </summary>
+        public static void GetAccountPassword()
+        {
+            DataTable dt = _q.Select("SELECT * FROM $cht_access_control_card.account");
+            foreach(DataRow row in dt.Rows)
+            {
+                tr._username = row["account"].ToString();
+                tr._password = row["password"].ToString();
+            }
+        }
     }
 }

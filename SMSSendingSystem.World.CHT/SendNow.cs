@@ -62,6 +62,8 @@ namespace SMSSendingSystem.World.CHT
         {
             //建立回傳字典
             tool.BuildDic();
+            //取得中華電信發送帳密
+            tool.GetAccountPassword();
 
             bgwork = new BackgroundWorker();
             bgwork.DoWork += new DoWorkEventHandler(bgwork_DoWork);

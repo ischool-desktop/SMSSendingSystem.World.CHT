@@ -10,12 +10,12 @@ namespace SMSSendingSystem.World.CHT
         /// <summary>
         /// 中華簡訊 - 使用者名稱
         /// </summary>
-        public string _username = "14525";
+        public string _username;
 
         /// <summary>
         /// 中華簡訊 - 密碼
         /// </summary>
-        public string _password = "14525";
+        public string _password;
 
         /// <summary>
         /// 中華簡訊 - 網址
