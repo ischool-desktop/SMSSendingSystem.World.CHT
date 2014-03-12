@@ -176,6 +176,8 @@ namespace SMSSendingSystem.World.CHT
             item.SubItems.Add(stud.SeatNo);
             item.SubItems.Add(stud.Name);
             item.SubItems.Add(stud.SMS_Phone);
+            //Cloud 2014.3.10
+            item.Tag = stud;
 
             stud.ListViewItem = item;
 
@@ -231,13 +233,29 @@ namespace SMSSendingSystem.World.CHT
         /// <summary>
         /// 取得發送帳號密碼
         /// </summary>
-        public static void GetAccountPassword()
+        public static bool GetAccountPassword()
         {
-            DataTable dt = _q.Select("SELECT * FROM $cht_access_control_card.account");
-            foreach(DataRow row in dt.Rows)
+            AccessHelper a = new AccessHelper();
+            List<CHTAccount> udt = a.Select<CHTAccount>();
+
+            try
             {
-                tr._username = row["account"].ToString();
-                tr._password = row["password"].ToString();
+                tr._username = udt[0].Account;
+                tr._password = udt[0].Password;
+            }
+            catch
+            {
+                tr._username = "";
+                tr._password = "";
+            }
+
+            if (!string.IsNullOrWhiteSpace(tr._username) && !string.IsNullOrWhiteSpace(tr._password))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }

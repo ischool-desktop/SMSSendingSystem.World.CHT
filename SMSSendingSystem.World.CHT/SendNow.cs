@@ -63,8 +63,14 @@ namespace SMSSendingSystem.World.CHT
             //建立回傳字典
             tool.BuildDic();
             //取得中華電信發送帳密
-            tool.GetAccountPassword();
+            bool check = tool.GetAccountPassword();
 
+            if (!check)
+            {
+                MsgBox.Show("發送帳號密碼取得失敗,請確認發送帳號密碼是否未設定");
+                this.Close();
+            }
+            
             bgwork = new BackgroundWorker();
             bgwork.DoWork += new DoWorkEventHandler(bgwork_DoWork);
             bgwork.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bgwork_RunWorkerCompleted);
