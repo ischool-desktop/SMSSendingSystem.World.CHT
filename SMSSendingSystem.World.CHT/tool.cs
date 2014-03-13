@@ -108,8 +108,9 @@ namespace SMSSendingSystem.World.CHT
             StringBuilder sb = new StringBuilder();
 
             List<KeyBoStudent> Students = new List<KeyBoStudent>();
-            sb.Append("select student.id,student.name,student.student_number,student.seat_no,student.ref_class_id,class.class_name,sms_phone from student ");
+            sb.Append("select student.id,student.name,student.student_number,student.seat_no,student.ref_class_id,class.class_name,$cht_access_control_card.student_cardno.cell_phone from student ");
             sb.Append("left join class on student.ref_class_id=class.id ");
+            sb.Append("left join $cht_access_control_card.student_cardno on student.id=$cht_access_control_card.student_cardno.ref_student_id ");
             sb.Append(string.Format("where student.id in ('{0}') ", string.Join("','", _IDList)));
             sb.Append("order by class.class_name,student.seat_no");
 

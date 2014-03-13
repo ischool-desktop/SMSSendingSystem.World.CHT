@@ -19,7 +19,7 @@ namespace SMSSendingSystem.World.CHT
             ClassID = "" + row["ref_class_id"];
             ClassName = "" + row["class_name"];
 
-            SMS_Phone = "" + row["sms_phone"];
+            SMS_Phone = "" + row["cell_phone"];
         }
 
         public ListViewItem ListViewItem { get; set; }
